@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Puri Coast Stay | Hotel Booking</title>
+    <meta
+      name="description"
+      content="Book your perfect beach escape in Puri with Puri Coast Stay. Find seaside hotels, family resorts, and luxury stays near the temple city."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a class="brand" href="#top" aria-label="Puri Coast Stay home">
+          <span class="brand-mark">P</span>
+          <span>Puri Coast Stay</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main menu">
+          <a href="#stay-types">Stays</a>
+          <a href="#experience">Experience</a>
+          <a href="#offers">Offers</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="btn btn-light">List your property</button>
+          <button class="btn btn-outline">Sign in</button>
+          <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Your beachside escape starts here</p>
+            <h1>Book a stay that feels like vacation.</h1>
+            <p class="sub-copy">
+              Discover luxury resorts, boutique stays, and family-friendly hotels near Puri Beach,
+              Jagannath Temple, and the best sunset spots in Odisha.
+            </p>
+
+            <div class="hero-meta">
+              <div class="avatars" aria-hidden="true">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&q=80" alt="" />
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&q=80" alt="" />
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=80&q=80" alt="" />
+              </div>
+              <span>Trusted by 12k+ travelers</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="search-panel container">
+        <form id="booking-form" class="booking-form">
+          <div class="field">
+            <label for="location">Destination</label>
+            <input id="location" type="text" value="Puri, Odisha" required />
+          </div>
+
+          <div class="field">
+            <label for="checkin">Check-in</label>
+            <input id="checkin" type="date" required />
+          </div>
+
+          <div class="field">
+            <label for="checkout">Check-out</label>
+            <input id="checkout" type="date" required />
+          </div>
+
+          <div class="field guests-field">
+            <label>Guests</label>
+            <div class="guest-control">
+              <span id="guest-count">2 Guests</span>
+              <div class="guest-buttons">
+                <button type="button" id="minus-guest" aria-label="Decrease guests">−</button>
+                <button type="button" id="plus-guest" aria-label="Increase guests">+</button>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary search-btn" type="submit">Search stays</button>
+        </form>
+        <p id="search-message" class="search-message" aria-live="polite"></p>
+      </section>
+
+      <section id="stay-types" class="container section">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Popular picks</p>
+            <h2>Stay your way in Puri</h2>
+          </div>
+          <a href="#offers" class="text-link">Explore all stays</a>
+        </div>
+
+        <div class="card-grid">
+          <article class="stay-card">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="Beachfront hotel in Puri" />
+            <div class="card-body">
+              <div class="card-topline">
+                <h3>Beachfront Bliss</h3>
+                <span class="rating">★ 4.9</span>
+              </div>
+              <p>Ocean-view rooms • Walk to Puri Beach</p>
+              <div class="price-row">
+                <strong>₹4,200</strong>
+                <span>/ night</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="stay-card">
+            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80" alt="Resort with pool" />
+            <div class="card-body">
+              <div class="card-topline">
+                <h3>Sea Pearl Resort</h3>
+                <span class="rating">★ 4.8</span>
+              </div>
+              <p>Poolside luxury • Family-friendly</p>
+              <div class="price-row">
+                <strong>₹6,800</strong>
+                <span>/ night</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="stay-card">
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Boutique hotel room" />
+            <div class="card-body">
+              <div class="card-topline">
+                <h3>Temple View Homes</h3>
+                <span class="rating">★ 4.7</span>
+              </div>
+              <p>Quiet suites • Near heritage sites</p>
+              <div class="price-row">
+                <strong>₹3,600</strong>
+                <span>/ night</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="stay-card">
+            <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80" alt="Luxury villa" />
+            <div class="card-body">
+              <div class="card-topline">
+                <h3>Sunset Villas</h3>
+                <span class="rating">★ 5.0</span>
+              </div>
+              <p>Private balcony • Romantic getaway</p>
+              <div class="price-row">
+                <strong>₹8,900</strong>
+                <span>/ night</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="section experience-wrap">
+        <div class="container experience">
+          <div class="experience-copy">
+            <p class="section-kicker">Why travelers choose us</p>
+            <h2>Book easy. Stay better.</h2>
+            <p>
+              From beachfront getaways to spiritual pilgrimages, we help you find stays that match your pace, budget,
+              and plans for a memorable visit to Puri.
+            </p>
+          </div>
+
+          <div class="feature-grid">
+            <div class="feature-item">
+              <div class="icon">✓</div>
+              <div>
+                <h3>Curated stays</h3>
+                <p>Verified properties with guest reviews and flexible booking options.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="icon">✦</div>
+              <div>
+                <h3>Best location picks</h3>
+                <p>Choose hotels near beaches, temples, markets, and scenic sunset points.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="icon">%</div>
+              <div>
+                <h3>Smart savings</h3>
+                <p>Exclusive deals on family stays, couples retreats, and long weekend trips.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="icon">☎</div>
+              <div>
+                <h3>Tour support</h3>
+                <p>We help with local travel info, transfers, and unforgettable itinerary ideas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="offers" class="container section promo-section">
+        <div class="promo-card">
+          <div>
+            <p class="section-kicker">Special offer</p>
+            <h2>Save up to 30% on 3-night beach stays</h2>
+          </div>
+          <button class="btn btn-primary" type="button">View deals</button>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <a class="brand footer-brand" href="#top">
+            <span class="brand-mark">P</span>
+            <span>Puri Coast Stay</span>
+          </a>
+        </div>
+
+        <div class="footer-links">
+          <a href="#stay-types">Hotels</a>
+          <a href="#experience">Experience</a>
+          <a href="#offers">Offers</a>
+        </div>
+
+        <p>© <span id="year"></span> Puri Coast Stay</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
